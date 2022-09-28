@@ -14,6 +14,9 @@ const evaConfig = {
   evaPackage: '@eva-design/eva',
 };
 
+const nodeLibs = require('node-libs-react-native');
+nodeLibs.vm = require.resolve('vm-browserify');
+
 module.exports = MetroConfig.create(evaConfig, {
   transformer: {
     getTransformOptions: async () => ({
