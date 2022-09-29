@@ -42,4 +42,4 @@ module.exports = MetroConfig.create(evaConfig, {
       require.resolve('react-native/Libraries/polyfills/Object.es7.js'),
     ],
   },
-}); 
+});
