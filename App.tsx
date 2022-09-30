@@ -22,6 +22,18 @@ export const App = () => {
   const [provider] = useState(
     new Web3.providers.HttpProvider('http//127.0.0.1:7545'),
   );
+
+  const onGetAccounts = async () => {
+    try {
+      web3.setProvider(provider);
+      const acc = await web3.eth.personal.getAccounts();
+      console.log(acc);
+    } catch (error) {
+      console.log('error');
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <IconRegistry icons={EvaIconsPack} />
@@ -36,7 +48,9 @@ export const App = () => {
           <Text style={styles.text} appearance="hint">
             For example, try changing theme to Dark by using eva.dark
           </Text>
-          <Button style={styles.likeButton}>LIKE</Button>
+          <Button onPress={onGetAccounts} style={styles.likeButton}>
+            LIKE
+          </Button>
         </Layout>
       </ApplicationProvider>
     </>
