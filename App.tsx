@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React from 'react';
+import React, {useState} from 'react';
 import {ImageProps, StyleSheet} from 'react-native';
 import {
   ApplicationProvider,
@@ -18,6 +18,9 @@ const HeartIcon = (
 ): React.ReactElement<ImageProps> => <Icon {...props} name="heart" />;
 
 export const App = () => {
+  const [provider] = useState(
+    new Web3.providers.HttpProvider('http//127.0.0.1:7545'),
+  );
   return (
     <>
       <IconRegistry icons={EvaIconsPack} />
@@ -32,9 +35,7 @@ export const App = () => {
           <Text style={styles.text} appearance="hint">
             For example, try changing theme to Dark by using eva.dark
           </Text>
-          <Button style={styles.likeButton} accessoryLeft={HeartIcon}>
-            LIKE
-          </Button>
+          <Button style={styles.likeButton}>LIKE</Button>
         </Layout>
       </ApplicationProvider>
     </>
