@@ -18,6 +18,7 @@ const HeartIcon = (
 ): React.ReactElement<ImageProps> => <Icon {...props} name="heart" />;
 
 export const App = () => {
+  const [web3] = useState<Web3>(new Web3());
   const [provider] = useState(
     new Web3.providers.HttpProvider('http//127.0.0.1:7545'),
   );
