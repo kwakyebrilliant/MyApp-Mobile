@@ -48,7 +48,7 @@ export const App = () => {
           <Text style={styles.text} appearance="hint">
             For example, try changing theme to Dark by using eva.dark
           </Text>
-          <Button onPress={onGetAccounts} style={styles.likeButton}> 
+          <Button onPress={onGetAccounts} style={styles.likeButton}>
             LIKE
           </Button>
         </Layout>
