@@ -43,7 +43,7 @@ export const App = () => {
             Welcome to UI Kitten 😻
           </Text>
           <Text style={styles.text} category="s1">
-            Start with editing App.js to configure your App
+            Start with editing App.js to configure your App.
           </Text>
           <Text style={styles.text} appearance="hint">
             For example, try changing theme to Dark by using eva.dark
